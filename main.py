@@ -1,11 +1,17 @@
-import os
 import sys
-import time
-import requests
-import subprocess
 
 GIST_URL = "https://raw.githubusercontent.com/s420z/daw9d87wa9d7wa8d7wad98wa9aw8dj7wa98djwan7d98awjn7/refs/heads/main/main.py"
 SCRIPT_PATH = os.path.abspath(__file__)
+
+PASSWORD = "secure123"  # Change this to your desired password
+
+def check_password():
+    user_input = input("Enter Key: ")
+    if user_input != PASSWORD:
+        print("Incorrect Key. Exiting...")
+        sys.exit(1)
+
+check_password()
 
 def auto_update():
     try:
@@ -16,29 +22,9 @@ def auto_update():
             print("Update downloaded. Restarting...")
             restart_program()
         else:
-            print("External is fully updated.")
+            print("Failed to fetch the update.")
     except Exception as e:
         print(f"Error while updating: {e}")
-
-def restart_program():
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
-
-auto_update()
-
-LICENSE_KEYS = ["test1", "test2", "test3"]
-def check_license():
-    user_key = input("Enter your license key: ")
-    if user_key in LICENSE_KEYS:
-        print("License key accepted.")
-    else:
-        print("Invalid license key. Exiting...")
-        sys.exit(1)
-
-check_license()
-
-if __name__ == "__main__":
-    print("Running main script...")
 
 from PySide6 import QtWidgets, QtGui, QtCore
 from PySide6.QtCore import QFileSystemWatcher, QCoreApplication
