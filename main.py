@@ -16,7 +16,7 @@ def auto_update():
             print("Update downloaded. Restarting...")
             restart_program()
         else:
-            print("Failed to fetch the update.")
+            print("External is fully updated.")
     except Exception as e:
         print(f"Error while updating: {e}")
 
