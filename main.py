@@ -3,7 +3,7 @@ import sys
 GIST_URL = "https://raw.githubusercontent.com/s420z/daw9d87wa9d7wa8d7wad98wa9aw8dj7wa98djwan7d98awjn7/refs/heads/main/main.py"
 SCRIPT_PATH = os.path.abspath(__file__)
 
-PASSWORD = "secure123"  # Change this to your desired password
+PASSWORD = "test123"  # Change this to your desired password
 
 def check_password():
     user_input = input("Enter Key: ")
