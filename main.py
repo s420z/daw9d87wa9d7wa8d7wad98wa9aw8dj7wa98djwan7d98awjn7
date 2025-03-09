@@ -4,7 +4,7 @@ import time
 import requests
 import subprocess
 
-GIST_URL = "https://raw.githubusercontent.com/s420z/csgo/main/main.py"
+GIST_URL = "https://raw.githubusercontent.com/s420z/daw9d87wa9d7wa8d7wad98wa9aw8dj7wa98djwan7d98awjn7/refs/heads/main/main.py"
 SCRIPT_PATH = os.path.abspath(__file__)
 
 def auto_update():
